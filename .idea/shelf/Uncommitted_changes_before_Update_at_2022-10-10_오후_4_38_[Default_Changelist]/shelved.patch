@@ -1,0 +1,412 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ScrollView\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    tools:context=\".MainActivity\">\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:orientation=\"vertical\">\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:background=\"#009688\"\r\n            android:text=\"for us, for earth\" />\r\n    <TextView\r\n        android:text=\"내정보\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\" />\r\n\r\n        <Button\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:backgroundTint=\"#C3C1C1\"\r\n            android:text=\"정보수정\" />\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"닉네임:\" />\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"휴대전화:\" />\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"이메일:\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/button2\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:backgroundTint=\"@color/teal_700\"\r\n            android:text=\"비밀번호 재설정\" />\r\n\r\n\r\n    </LinearLayout>\r\n\r\n\r\n</ScrollView>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision 872dd6d654e34650b2fc09e11ecc9d75884b7931)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1665387496565)
+@@ -1,57 +1,272 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<ScrollView
++<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    android:orientation="vertical"
+-    tools:context=".MainActivity">
+-    <LinearLayout
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        android:orientation="vertical">
++    tools:context=".MainActivity"
++    android:orientation="vertical">
++
++    <FrameLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:background="#F5F5F5">
++
++        <ImageView
++            android:layout_width="match_parent"
++            android:layout_height="270dp"
++            android:src="@drawable/rectangle_b" />
++        <TextView
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="환영합니다!"
++            android:textSize="16dp"
++            android:layout_marginTop="35dp"
++            android:layout_marginLeft="26dp"
++            android:textColor="@color/black"/>
++        <TextView
++            android:id="@+id/username"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="김슈니 님"
++            android:textSize="20dp"
++            android:layout_marginTop="60dp"
++            android:layout_marginLeft="26dp"
++            android:textColor="@color/black"
++            android:textStyle="bold"/>
++        <TextView
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:textSize="16dp"
++            android:layout_marginTop="89dp"
++            android:layout_marginLeft="26dp"
++            android:textColor="@color/black"
++            android:text="지구를 지키는 한 걸음"/>
++
++        <ImageButton
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:background="@drawable/alarm"
++            android:layout_marginTop="25dp"
++            android:layout_marginLeft="363dp"/>
++
++
++<!--스탬프 시작-->
++        <ImageView
++            android:layout_width="300dp"
++            android:layout_height="wrap_content"
++            android:src="@drawable/rectangle_w"
++            android:layout_marginTop="140dp"
++            android:layout_marginLeft="55dp" />
++
++        <ImageView
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:src="@drawable/earth"
++            android:layout_marginTop="170dp"
++            android:layout_marginLeft="80dp"/>
++
++        <TextView
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="현재 모은 스탬프"
++            android:layout_marginTop="185dp"
++            android:layout_marginLeft="200dp"
++            android:textSize="13dp"
++            android:textColor="@color/black" />
++
++        <TextView
++            android:id="@+id/stamp_number"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="4개"
++            android:layout_marginTop="210dp"
++            android:layout_marginLeft="220dp"
++            android:textSize="32dp"
++            android:textStyle="bold"
++            android:textColor="@color/black" />
++<!--스탬프 끝-->
++
++<!--히스토리 시작-->
++        <ImageView
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:src="@drawable/line1"
++            android:layout_marginTop="268dp"
++            android:layout_marginLeft="50dp"/>
++        <ImageView
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:src="@drawable/line2"
++            android:layout_marginTop="277dp"
++            android:layout_marginLeft="204dp"/>
++        <ImageButton
++            android:id="@+id/history_image"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:background="@drawable/history"
++            android:layout_marginTop="287dp"
++            android:layout_marginLeft="80dp"/>
++        <Button
++            android:id="@+id/history_button"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="히스토리"
++            android:background="#00ff0000"
++            android:layout_marginTop="273dp"
++            android:layout_marginLeft="95dp"
++            android:textSize="15dp"
++            android:textStyle="bold"
++            android:textColor="@color/black"/>
++<!--히스토리 끝-->
++
++<!--플로깅하기 시작-->
++        <ImageButton
++            android:id="@+id/plogging_image"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:background="@drawable/plogging"
++            android:layout_marginTop="287dp"
++            android:layout_marginLeft="226dp"/>
++        <Button
++            android:id="@+id/plogging_button"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="플로깅하기"
++            android:background="#00ff0000"
++            android:layout_marginTop="273dp"
++            android:layout_marginLeft="240dp"
++            android:textSize="15dp"
++            android:textStyle="bold"
++            android:textColor="@color/black"/>
++    </FrameLayout>
++<!--히스토리 끝-->
++
++
++    <ScrollView
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:layout_marginBottom="50dp"
++        android:background="#F5F5F5">
++
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:orientation="vertical">
+ 
+-        <TextView
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:background="#009688"
+-            android:text="for us, for earth" />
+-    <TextView
+-        android:text="내정보"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content" />
++<!--플로깅 캠페인 시작-->
++            <FrameLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content">
++                <ImageView
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:layout_gravity="top"
++                    android:src="@drawable/rectangle1"></ImageView>
++
++                <TextView
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:text="플로깅 캠페인"
++                    android:textStyle="bold"
++                    android:textSize="17dp"
++                    android:textColor="@color/black"
++                    android:layout_marginTop="20dp"
++                    android:layout_marginLeft="16dp"/>
+ 
+-        <Button
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:backgroundTint="#C3C1C1"
+-            android:text="정보수정" />
++<!--플로깅 캠페인 사진 스크롤-->
++                <HorizontalScrollView
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content">
++                    <LinearLayout
++                        android:layout_width="wrap_content"
++                        android:layout_height="match_parent"
++                        android:orientation="horizontal">
++
++                        <ImageButton
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:layout_marginLeft="16dp"
++                            android:layout_marginTop="50dp"
++                            android:background="@drawable/campaign1" />
++
++                        <ImageButton
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:layout_marginLeft="16dp"
++                            android:layout_marginTop="50dp"
++                            android:background="@drawable/campaign2" />
++                    </LinearLayout>
++                </HorizontalScrollView>
++<!--플로깅 캠페인 스크롤 뷰 끝-->
++
++            </FrameLayout>
++<!--플로깅 캠페인 끝-->
+ 
+-        <TextView
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:text="닉네임:" />
+-
+-        <TextView
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:text="휴대전화:" />
+-
+-        <TextView
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:text="이메일:" />
+-
+-        <Button
+-            android:id="@+id/button2"
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:backgroundTint="@color/teal_700"
+-            android:text="비밀번호 재설정" />
++
++<!--환경 소식 시작-->
++            <FrameLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content">
++                <ImageView
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:src="@drawable/rectangle2"
++                    android:layout_gravity="top"
++                    android:layout_marginTop="10dp"></ImageView>
++                <TextView
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:text="환경소식"
++                    android:textStyle="bold"
++                    android:textSize="17dp"
++                    android:textColor="@color/black"
++                    android:layout_marginTop="30dp"
++                    android:layout_marginLeft="16dp"/>
++
++<!--환경 소식 스크롤뷰 시작-->
++                <HorizontalScrollView
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content">
++                    <LinearLayout
++                        android:layout_width="wrap_content"
++                        android:layout_height="match_parent"
++                        android:orientation="horizontal">
++                        <LinearLayout
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:orientation="vertical">
++                            <ImageButton
++                                android:layout_width="wrap_content"
++                                android:layout_height="wrap_content"
++                                android:layout_marginLeft="16dp"
++                                android:layout_marginTop="65dp"
++                                android:background="@drawable/news1" />
++                            <TextView
++                                android:layout_width="wrap_content"
++                                android:layout_height="wrap_content"
++                                android:text="서울도심 쓰레기 함께 주워요…롯데백화점 '시티플로깅'"
++                                android:textColor="@color/black"
++                                android:textSize="12dp"
++                                android:layout_marginLeft="16dp"
++                                android:layout_marginTop="5dp"/>
++                        </LinearLayout>
++                        <ImageButton
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:layout_marginLeft="16dp"
++                            android:layout_marginTop="65dp"
++                            android:background="@drawable/news2" />
++                    </LinearLayout>
++                </HorizontalScrollView>
++<!--환경 소식 스크롤뷰 끝-->
+ 
++            </FrameLayout>
++<!--환경 소식 끝-->
+ 
+-    </LinearLayout>
+-
+-
+-</ScrollView>
++        </LinearLayout>
++    </ScrollView>
++
++</LinearLayout>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/Users/LG/AndroidStudioProjects/aoppart2chapter01/app/src/main/res/layout/activity_main.xml\" value=\"0.72\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"Android Studio default JDK\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 872dd6d654e34650b2fc09e11ecc9d75884b7931)
++++ b/.idea/misc.xml	(date 1665382496563)
+@@ -4,10 +4,12 @@
+     <option name="filePathToZoomLevelMap">
+       <map>
+         <entry key="..\:/Users/LG/AndroidStudioProjects/aoppart2chapter01/app/src/main/res/layout/activity_main.xml" value="0.72" />
++        <entry key="..\:/Users/wlssk/AndroidStudioProjects/aop-part2-chapter01/app/src/main/res/layout/activity_main.xml" value="0.33" />
++        <entry key="..\:/Users/wlssk/AndroidStudioProjects/aop-part2-chapter01/app/src/main/res/layout/activity_main2.xml" value="0.17401215805471124" />
+       </map>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// Top-level build file where you can add configuration options common to all sub-projects/modules.\r\nplugins {\r\n    id 'com.android.application' version '7.2.0' apply false\r\n    id 'com.android.library' version '7.2.0' apply false\r\n    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false\r\n}\r\n\r\ntask clean(type: Delete) {\r\n    delete rootProject.buildDir\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	(revision 872dd6d654e34650b2fc09e11ecc9d75884b7931)
++++ b/build.gradle	(date 1654179395757)
+@@ -1,7 +1,7 @@
+ // Top-level build file where you can add configuration options common to all sub-projects/modules.
+ plugins {
+-    id 'com.android.application' version '7.2.0' apply false
+-    id 'com.android.library' version '7.2.0' apply false
++    id 'com.android.application' version '7.2.1' apply false
++    id 'com.android.library' version '7.2.1' apply false
+     id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+ }
+ 
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    package=\"fastcampus.aop.part2.chapter01\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.Aoppart2chapter01\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 872dd6d654e34650b2fc09e11ecc9d75884b7931)
++++ b/app/src/main/AndroidManifest.xml	(date 1665377501688)
+@@ -14,6 +14,9 @@
+         android:theme="@style/Theme.Aoppart2chapter01"
+         tools:targetApi="31">
+         <activity
++            android:name=".MainActivity2"
++            android:exported="false" />
++        <activity
+             android:name=".MainActivity"
+             android:exported="true">
+             <intent-filter>
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"GRADLE\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+--- a/.idea/gradle.xml	(revision 872dd6d654e34650b2fc09e11ecc9d75884b7931)
++++ b/.idea/gradle.xml	(date 1654092027297)
+@@ -7,6 +7,7 @@
+         <option name="testRunner" value="GRADLE" />
+         <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="gradleJvm" value="Embedded JDK" />
+         <option name="modules">
+           <set>
+             <option value="$PROJECT_DIR$" />
